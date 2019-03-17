@@ -228,7 +228,7 @@ text(meanx, 14, round(meanx,0), col=&quot;red&quot;, adj=c(1,0))
 lines(c(medianx,medianx), c(0,14), col=&quot;blue&quot;, lwd=2)
 text(medianx, 15, &quot;Median&quot;, col=&quot;blue&quot;, adj=c(0,0))
 text(medianx, 14, round(medianx,0), col=&quot;blue&quot;, adj=c(0,0))</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-3-1.png" /><!-- --></p>
 </div>
 <div id="mean-and-median-number-of-steps-taken-each-day" class="section level2">
 <h2>Mean and median number of steps taken each day</h2>
@@ -379,7 +379,7 @@ plot(uniqueIntervals,avgStepsPerInterval, main=&quot;Avg number of steps taken p
 
 maxAvg &lt;- uniqueIntervals[which.max(avgStepsPerInterval)]
 abline(v=maxAvg, col=&quot;red&quot;, lwd=2)</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-5-1.png" /><!-- --></p>
 </div>
 <div id="the-5-minute-interval-that-on-average-contains-the-maximum-number-of-steps" class="section level2">
 <h2>The 5-minute interval that, on average, contains the maximum number of steps</h2>
@@ -397,7 +397,7 @@ data2 &lt;- data
 
 # Determine how many NAs
 md.pattern(data2)</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-7-1.png" /><!-- --></p>
 <pre><code>##       date interval FormattedDate steps     
 ## 15264    1        1             1     1    0
 ## 2304     1        1             1     0    1
@@ -442,7 +442,7 @@ md.pattern(completeData)</code></pre>
 ## ==&gt;  V &lt;==  No need for mice. This data set is completely observed.
 ##  \  \|/  /
 ##   `-----&#39;</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-7-2.png" /><!-- --></p>
 <pre><code>##       steps date interval FormattedDate  
 ## 17568     1    1        1             1 0
 ##           0    0        0             0 0</code></pre>
@@ -469,20 +469,20 @@ text(meany, 14, round(meany,0), col=&quot;red&quot;, adj=c(1,0))
 lines(c(mediany,mediany), c(0,14), col=&quot;blue&quot;, lwd=2)
 text(mediany, 15, &quot;Median&quot;, col=&quot;blue&quot;, adj=c(0,0))
 text(mediany, 14, round(mediany,0), col=&quot;blue&quot;, adj=c(0,0))</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-7-3.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-7-3.png" /><!-- --></p>
 <pre class="r"><code># Get mean per day
 meanStepsNew &lt;- sapply(stepsSplitNew, mean, na.rm=TRUE)
 meanDFNew &lt;- data.frame(date=uniqueDates, meanStepsNew=meanStepsNew, row.names=NULL)
 meanDFNew</code></pre>
 <pre><code>##          date meanStepsNew
-## 1  2012-10-01   47.5763889
+## 1  2012-10-01   28.8680556
 ## 2  2012-10-02    0.4375000
 ## 3  2012-10-03   39.4166667
 ## 4  2012-10-04   42.0694444
 ## 5  2012-10-05   46.1597222
 ## 6  2012-10-06   53.5416667
 ## 7  2012-10-07   38.2465278
-## 8  2012-10-08   31.9236111
+## 8  2012-10-08   28.8819444
 ## 9  2012-10-09   44.4826389
 ## 10 2012-10-10   34.3750000
 ## 11 2012-10-11   35.7777778
@@ -506,20 +506,20 @@ meanDFNew</code></pre>
 ## 29 2012-10-29   17.4236111
 ## 30 2012-10-30   34.0937500
 ## 31 2012-10-31   53.5208333
-## 32 2012-11-01   42.7326389
+## 32 2012-11-01   35.3055556
 ## 33 2012-11-02   36.8055556
 ## 34 2012-11-03   36.7048611
-## 35 2012-11-04   48.8125000
+## 35 2012-11-04   31.5173611
 ## 36 2012-11-05   36.2465278
 ## 37 2012-11-06   28.9375000
 ## 38 2012-11-07   44.7326389
 ## 39 2012-11-08   11.1770833
-## 40 2012-11-09   33.0972222
-## 41 2012-11-10   29.6736111
+## 40 2012-11-09   39.9062500
+## 41 2012-11-10   28.2743056
 ## 42 2012-11-11   43.7777778
 ## 43 2012-11-12   37.3784722
 ## 44 2012-11-13   25.4722222
-## 45 2012-11-14   37.6562500
+## 45 2012-11-14   31.3159722
 ## 46 2012-11-15    0.1423611
 ## 47 2012-11-16   18.8923611
 ## 48 2012-11-17   49.7881944
@@ -535,7 +535,7 @@ meanDFNew</code></pre>
 ## 58 2012-11-27   47.3819444
 ## 59 2012-11-28   35.3576389
 ## 60 2012-11-29   24.4687500
-## 61 2012-11-30   44.6631944</code></pre>
+## 61 2012-11-30   39.6215278</code></pre>
 <pre class="r"><code># Get median per day
 medianStepsNew &lt;- sapply(stepsSplitNew, median, na.rm=TRUE)
 medianDFNew &lt;- data.frame(date=uniqueDates, medianStepsNew=medianStepsNew, row.names=NULL)
@@ -616,7 +616,7 @@ completeDataAvgStepsPerInterval &lt;- aggregate(steps ~ interval + WeekendorWeek
 #Create a panel plot showing weekend and weekday activity
 
 ggplot(data=completeDataAvgStepsPerInterval,aes(interval, steps, colour=WeekendorWeekday)) + geom_line() + facet_grid(WeekendorWeekday ~ .) + labs(title=&quot;Avg Step Activity per Interval&quot;, x=&quot;Interval&quot;, y=&quot;Avg Steps&quot;)</code></pre>
-<p><img src="PA1_template_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="PA1_template_files/figure-html/unnamed-chunk-8-1.png" /><!-- --></p>
 </div>
 <div id="weekdays-show-a-higher-amount-of-activity-in-the-morning-and-decreases-throughout-the-day-weekends-show-a-sustained-amount-of-activity-throuhout-the-morning-and-afternoon." class="section level2">
 <h2>Weekdays show a higher amount of activity in the morning and decreases throughout the day; Weekends show a sustained amount of activity throuhout the morning and afternoon.</h2>

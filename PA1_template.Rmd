@@ -3,12 +3,14 @@ title: "PA1_template"
 author: "Abigail Smyth"
 date: "March 17, 2019"
 output: 
-    html_document:
-      self_contained: false
+  html_document:
+    keep_md: true
+    self_contained: false
 ---
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 library(mice)
 library(dplyr)
 library(ggplot2)
