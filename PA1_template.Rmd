@@ -167,7 +167,7 @@ medianDFNew
 
 # Create new factor variable in dataset denoting weekend or weekday
 
-completeData$WeekendorWeekday <- ifelse(as.POSIXlt(completeData$Weekday) %in% c(0,6), 'weekend', 'weekday')
+completeData$WeekendorWeekday <- ifelse(completeData$Weekday %in% c(0,6), 'weekend', 'weekday')
 
 completeDataAvgStepsPerInterval <- aggregate(steps ~ interval + WeekendorWeekday, data=completeData, mean)
 
